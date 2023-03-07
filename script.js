@@ -20,7 +20,7 @@ const setTheme = (bodyClass, btnClass) => {
 	body.classList.remove(localStorage.getItem('portfolio-theme'))
 	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
 
-  addThemeClass(bodyClass, btnClass)
+  	addThemeClass(bodyClass, btnClass)
 
 	localStorage.setItem('portfolio-theme', bodyClass)
 	localStorage.setItem('portfolio-btn-theme', btnClass)
