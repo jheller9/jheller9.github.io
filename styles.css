@@ -315,10 +315,9 @@ main {
   border-radius: 8px;
   float: left;
 
-  max-width: 380px;
-  max-height: 256px;
-  width: auto;
-  height: auto;
+  display: block;
+  width: 380px;
+  height: 256px;
 
   margin-top: auto;
   margin-bottom: auto;
