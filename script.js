@@ -63,7 +63,7 @@ const scrollUp = () => {
 
 const slideimages = [
 	createImgArray("media/project3_gifA.gif", "media/project3_gifB.gif", "media/project3_gifC.gif"),
-	createImgArray("media/project4_gifA.gif", "media/project4_gifB.gif", "media/project4_gifC.gif", "media/project4_gifD.gif")
+	createImgArray("media/project4_gifA.gif", "media/project4_gifB.gif", "media/project4_gifC.gif")
 ]
 
 var slideTimer = 0
