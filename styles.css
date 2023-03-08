@@ -285,14 +285,6 @@ main {
   padding: 5em;
 }
 
-.projects__grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
-}
-
 .project {
   padding: 2em;
   margin: 2em;
@@ -308,25 +300,13 @@ main {
   display: auto;
   margin-right: 2em;
   font-size: .8rem;
-  width:500px;
+  width: 500px;
 }
 
 .project_image {
   border-radius: 8px;
   float: left;
   position: relative;
-
-  display: block;
-}
-
-.project_gif_cover {
-  position: absolute;
-  margin-left: 27em;
-  z-index: 10;
-}
-
-.project_image, .project_gif_cover {
-  border-radius: 8px;
 
   width: 380px;
   height: 256px;
@@ -336,8 +316,22 @@ main {
   display: block;
 }
 
-.project_gif_cover:hover {
-  opacity:0;
+@media screen and (max-width : 1000px) {
+  .project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-gap: 2em;
+  }
+  
+  .project_info {
+    width: 100%;
+  }
+  
+  .project_image {
+    width: min(380px, 100%);
+    height: auto;
+  }
+
 }
 
 .project:hover {
