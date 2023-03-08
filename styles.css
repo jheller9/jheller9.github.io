@@ -314,14 +314,30 @@ main {
 .project_image {
   border-radius: 8px;
   float: left;
+  position: relative;
 
   display: block;
+}
+
+.project_gif_cover {
+  position: absolute;
+  margin-left: 27em;
+  z-index: 10;
+}
+
+.project_image, .project_gif_cover {
+  border-radius: 8px;
+
   width: 380px;
   height: 256px;
 
   margin-top: auto;
   margin-bottom: auto;
   display: block;
+}
+
+.project_gif_cover:hover {
+  opacity:0;
 }
 
 .project:hover {

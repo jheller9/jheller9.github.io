@@ -60,4 +60,39 @@ const scrollUp = () => {
 	}
 }
 
+
+const slideimages = [
+	createImgArray("media/project3_gifA.gif", "media/project3_gifB.gif", "media/project3_gifC.gif"),
+	createImgArray("media/project4_gifA.gif", "media/project4_gifB.gif", "media/project4_gifC.gif", "media/project4_gifD.gif")
+]
+
+var slideTimer = 0
+
+function slideshowStep() {
+	if (!document.images)
+		return
+
+	for(let i = 0; i < slideimages.length; i++) {
+		let len = slideimages[i].length
+		document.getElementById('slideshow' + i).src = slideimages[i][slideTimer % len].src
+	}
+
+	slideTimer++
+
+	setTimeout("slideshowStep()", 2500)
+}
+
+slideshowStep()
+
+function createImgArray(...urls) {
+	var imgArray = new Array()
+	
+	for(let i = 0; i < urls.length; i++) {
+		imgArray[i] = new Image()
+		imgArray[i].src = urls[i]
+	}
+
+	return imgArray
+}
+
 document.addEventListener('scroll', scrollUp)
